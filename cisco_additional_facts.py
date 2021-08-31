@@ -21,7 +21,7 @@ options:
     type: str
     description:
     - Specify the type of fact(s) to gather (default is all).
-    - Supported types: all, inventory, license, mac_address_table, routes, route_neighbors, vrfs
+    - Supported types: all, interfaces, inventory, license, mac_address_table, routes, route_neighbors, vrfs
     default: all
 
 author:
@@ -40,6 +40,24 @@ ansible_facts:
   returned: always
   type: dict
   contains:
+    ansible_net_interfaces:
+      description: Gather the network interface details.
+      type: dict
+      returned: when this host is a Cisco appliance
+      sample:
+        Ethernet2/48:
+          mtu: 9216
+          ipv4:
+          - subnet: "30"
+            address: 192.168.1.1
+          type: 1000/10000 Ethernet
+          duplex: full
+          bandwidth: 1000000
+          mediatype: 1G
+          macaddress: aa:bb:cc:dd:ee:ff
+          operstatus: up
+          description: VPC Keepalive Link
+          lineprotocol: up
     ansible_net_license:
       description: Gather the license details.
       type: str
