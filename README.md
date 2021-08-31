@@ -7,3 +7,5 @@ This Ansible module is intended to gather more detailed facts about Cisco device
 * Required: False
 * Default: all
 * Notes: Recommend not using "all" as it will often result in a command timeout due to long-running operations.
+
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/5thColumn/ansible-cisco_additional_facts)
