@@ -1,0 +1,2 @@
+ansible==4.0.0
+ansible-pylibssh==0.2.0
